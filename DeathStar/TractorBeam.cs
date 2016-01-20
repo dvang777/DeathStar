@@ -39,7 +39,7 @@ namespace TopSecretPlans
         public void CreateForce(int power, int direction)
         {
             Tractorbeamgeneratortower(power);
-            //Console.WriteLine($"Your tractor bean starts pulling with {power} at {direction} degrees");
+            //Console.WriteLine($"Your tractor beam starts pulling with {power} at {direction} degrees");
         }
     }
 }

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DeathStar;
 
 namespace TopSecretPlans
 {
-    public class HeatExchanger : IChangeTemperature
+    public class HeatExchanger : IChangeTemperature, IActivate
     {
         public int Temperature;
 
@@ -30,6 +31,16 @@ namespace TopSecretPlans
         public void HeatUp()
         {
             Temperature++; 
+        }
+
+        public void activate()
+        {
+            HeatUp();
+        }
+
+        public void refresh()
+        {
+            CoolDown();
         }
     }
 }

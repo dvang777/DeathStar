@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DeathStar;
 
 namespace TopSecretPlans
 {
-    public class Exhaust
+    public class Exhaust : IActivate
     {
         private readonly int Diameter;
         private readonly int Length;
@@ -14,7 +15,8 @@ namespace TopSecretPlans
         
         public Exhaust()
         {
-
+            HydrogenGenerator hydrogenGenerator = new HydrogenGenerator(100);
+            HydrogenGenerator(100).activate();
         }
         public Exhaust(int diameter, int length, int numberOfFans)
         {
@@ -27,6 +29,16 @@ namespace TopSecretPlans
         public virtual Radiation ExpendExhaust()
         {
             return null;
+        }
+
+        public void activate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void refresh()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -8,9 +8,9 @@ namespace TopSecretPlans
 {
     public class ExteriorQuadaniumsteelouterhull
     {
-        int Hardness;
-        int Health = 100;
-        int Nanites;
+        public int Hardness;
+        public int Health = 100;
+        public int Nanites;
 
         public ExteriorQuadaniumsteelouterhull(int Hardness,int Health,int Nanites)
         {

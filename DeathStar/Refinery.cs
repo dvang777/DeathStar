@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DeathStar;
 
 namespace TopSecretPlans
 {
-    public class Refinery
+    public class Refinery : IActivate 
     {
         public bool isOperating;
         public int RefineFuel(int RawMaterials, int FuelRequested)
@@ -18,6 +19,16 @@ namespace TopSecretPlans
         public void Exhaust(int FuelRequested)
         {
             int theFuelRequested = RefineFuel(100, 50);
+        }
+
+        public void activate()
+        {
+            RefineFuel(100,50);
+        }
+
+        public void refresh()
+        {
+            Exhaust((RefineFuel(100,50)));
         }
     }
 }
